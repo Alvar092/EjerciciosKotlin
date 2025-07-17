@@ -1,4 +1,4 @@
-package io.keepcoding
+/* package io.keepcoding
 
 fun main() {
     val persona1 = PersonaDataClass(nombre = "Carlos", apellido = "de Tena")
@@ -9,7 +9,7 @@ fun main() {
     println(persona1)
 }
 
-private data class PersonaDataClass (
+private data class PersonaDataClass: Any (
     val nombre: String,
     var apellido: String = "",
     val edad: Int = 0,
@@ -29,3 +29,4 @@ private data class PersonaDataClass (
         return nombreCompletoYEdad()
     }
 }
+ */
