@@ -1,0 +1,52 @@
+package io.keepcoding
+
+fun main() {
+    val persona1 = PersonaDataClass(nombre = "Carlos", apellido = "de Tena")
+    val persona2 = PersonaDataClass(nombre = "Carlos", apellido = "de Tena")
+
+    if (persona2 == persona1) {
+        println("Son iguales")
+    } else {
+        println("Son distintas")
+    }
+
+
+    val personaDataClass2 = PersonaDataClass(nombre = "Carlos", apellido = "de Tena")
+    val personaDataClass3 = PersonaDataClass(nombre = "Carlos", apellido = "de Tena")
+    if (personaDataClass2 == personaDataClass3) {
+        println("Son iguales ")
+    } else {
+        println("Son distintas")
+    }
+
+    val personaDataClass4 = personaDataClass3.copy(
+        edad = 18
+    )
+
+    // persona1.nombre = ""
+    persona1.apellido = "asdfasdf"
+    persona1.esMayorDeEdad
+    persona1.nombreCompleto()
+    println(persona1)
+}
+
+private data class PersonaDataClass (
+    val nombre: String,
+    var apellido: String = "",
+    val edad: Int = 0,
+) {
+
+    var esMayorDeEdad = false
+
+    init {
+        esMayorDeEdad = edad > 18
+    }
+
+    fun nombreCompleto(): String = "$nombre $apellido"
+
+    fun nombreCompletoYEdad(): String = "$nombre $apellido esMayorDeEdad = $esMayorDeEdad"
+
+    override fun toString(): String {
+        return nombreCompletoYEdad()
+    }
+}
