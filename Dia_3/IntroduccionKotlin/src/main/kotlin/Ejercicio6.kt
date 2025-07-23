@@ -3,6 +3,8 @@ package io.keepcoding
 import kotlin.math.max
 import kotlin.math.min
 import kotlin.random.Random
+import kotlin.random.nextInt
+
 
 fun main() {
     val heroe1 = Heroe("Goku")

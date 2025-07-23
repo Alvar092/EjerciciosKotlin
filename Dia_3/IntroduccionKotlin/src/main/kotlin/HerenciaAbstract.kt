@@ -42,7 +42,7 @@ abstract class PersonajeAbstracto(
 
     open fun obtenerNombre(): String = nombre
 
-    abstract fun obtenerVida(): Int = vida
+    abstract fun obtenerVida(): Int
 
 }
 

@@ -30,7 +30,7 @@ fun main() {
         recibirCuracion()
         recibirCuracion()
         val superVida = vida * 2
-        superVida // Devuelve la última línea que se ejecuta
+        superVida // Devuelve la última línea que se ejecuta despues de recibir todos los cambios.
     }
 
     val heroeGolpeadoONuevo = heroe1?.apply {

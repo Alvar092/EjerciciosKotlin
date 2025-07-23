@@ -30,4 +30,12 @@ fun main() {
         action = lambda7
     )
 
+    val lambdaE1 = {println("Esta Lambda escribe: Hola")}
+    val lambdaE2: (numero: Int) -> Unit = {numero -> println("Esta lambda recibe un int y lo escribe: $numero")}
+    val lambdaE3:(posicion: Int, list: List<Any>) -> Unit  = {posicion, list->
+        println("Esta lambda recibe un int y una lista. Escribe el elemento que haya en la posicion ${list[posicion]}")}
+
+    lambdaE1()
+    lambdaE2(1)
+    lambdaE3(1, listOf("1", 1, 0.5f))
 }
